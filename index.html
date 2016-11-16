@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hold On, Handlebars</title>
+</head>
+<body>
+	<h1>Templates Within the HTML</h1>
+
+<!-- Example 1 -->
+	<!-- Appear inside the <script> tag with a type="text/x-handlebars-template" attribute and an ID. 
+	The variables are written in double curly braces (expression) -->
+
+	<script id="handlebars-starter" type="text/x-handlebars-template">
+   		<div>
+      		My name is {{name}}.<br>
+      		I am a {{occupation}}.
+   		</div>
+	</script>
+
+
+
+
+<!-- Example two -->
+	<script id="hbs-language" type="text/x-handlebars-template">
+		<div>
+			<!-- What is the language? {{language}} -->
+      		We are learning {{language}} and it is {{adjective}}
+		</div>
+	</script>
+
+
+
+
+
+
+<!-- Example three -->
+	 <script id="hbs-devs" type="text/x-handlebars-template">
+		This is a demo for {{website.name}}.<br/>
+	<!-- The each helper is used to iterate over an array. -->
+		{{#each names}}
+	  		{{@index}} I am a {{../occupation}}. My name is {{firstName}}.<br/>
+		{{/each}}
+	<!--  This segment refers to the PARENT template scope and not to one level up in the context. -->
+
+
+		<!-- if helper evaluates to a truthy value -->
+		{{#if cities}}
+	  		<h3>The cities are available.</h3>
+	  		{{#each cities}}
+	  			{{this}}
+	  		{{/each}}
+		{{else}}
+	  		The cities are not available.
+		{{/if}}
+
+	</script>
+
+
+
+<!-- Example four  - custom helper function-->
+	<script id="hbs-voter" type="text/x-handlebars-template">
+		{{#each person}} 
+			{{name}} {{voterStatus year}}<br>
+		{{/each}}
+
+
+	</script>
+
+
+
+
+
+
+
+
+	<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+	<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js"></script>-->	
+	<script src="lib/node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="lib/node_modules/handlebars/dist/handlebars.min.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
