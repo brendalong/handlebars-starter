@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "jquery": "^3.1.1"
+  },
+  "dependencies": {
+    "handlebars": "^4.0.8"
   }
 }

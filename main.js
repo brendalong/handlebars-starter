@@ -1,3 +1,5 @@
+
+//include path to handlebars in index.html
 // Data
 // context – the object where properties you include in curly braces are looked up
 let context = { "name" : "Brenda", 
@@ -53,7 +55,7 @@ $(document.body).append(html);
 //   },
 //   "names" : [
 //     {"firstName" : "Brenda"},
-//     {"firstName" : "Joe"},
+//     {"firstName" : "Hanna"},
 //     {"firstName" : "Greg"}
 //   ],
 //   "cities" : ["Nashville, Franklin, Green Hills"]
